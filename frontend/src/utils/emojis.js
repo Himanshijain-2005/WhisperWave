@@ -1,5 +1,5 @@
 export const funEmojis=[
-    "👩🏼",'👩🏼','👩🏼'
+    '👩🏼','👩🏼'
 ]
 
 export const getRandomEmojis= () =>{

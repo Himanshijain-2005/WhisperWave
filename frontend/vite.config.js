@@ -12,6 +12,14 @@ export default defineConfig({
         target: "http://localhost:4000",
       }
 
-    }
+    },
+    optimizeDeps: {
+         include: ['source-map-js'],
+          include: ['socket.io-client'], // Ensure socket.io-client is included
+ // Include specific modules if needed
+       },
+
   }
 })
+
+

@@ -2,10 +2,13 @@ import React, { useEffect,useRef } from 'react'
 import Message from './Message'
 import useGetMessages from '../../hooks/useGetMessages';
 import MessageSkelton from '../skeltons/MessageSkelton';
+import useListenMessages from '../../hooks/useListenMessages';
+//import { useLinkClickHandler } from 'react-router-dom';
 
 const Messages = () => {
    const {messages,loading}=useGetMessages();
   console.log("messages:",messages);
+  useListenMessages();
   const lastMessageRef=useRef();
   useEffect(()=>{
     setTimeout(()=>{
