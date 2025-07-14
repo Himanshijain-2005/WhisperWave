@@ -9,13 +9,14 @@ export default defineConfig({
     proxy:{
       "/api":
       {
+       changeOrigin: true,
         target: "https://whisperwave-kvja.onrender.com",
       }
 
     },
     optimizeDeps: {
-         include: ['source-map-js'],
-          include: ['socket.io-client'], // Ensure socket.io-client is included
+          include: ['source-map-js', 'socket.io-client'],
+
  // Include specific modules if needed
        },
 
