@@ -30,7 +30,7 @@ app.get("*",(req,res)=>{
     res.sendFile(path.join(_dirname,"frontend","dist","index.html"))
 })
 
-server.listen(4000,()=>
+server.listen(PORT,()=>
 {
     connectToMongoDB();
     console.log(`server is running on ${PORT}`);
