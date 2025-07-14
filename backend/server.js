@@ -14,7 +14,7 @@ import {app,server} from "./socket/socket.js";
 
 //const app=express();
 dotenv.config();
-const PORT=process.env.PORT || 4000;
+const port=process.env.PORT || 4000;
 app.use(express.json());
 app.use(cookieParser());
 app.get('/',(req,res)=>{
@@ -30,7 +30,7 @@ app.get("*",(req,res)=>{
     res.sendFile(path.join(_dirname,"frontend","dist","index.html"))
 })
 
-server.listen(PORT,()=>
+server.listen(port,()=>
 {
     connectToMongoDB();
     console.log(`server is running on ${PORT}`);
