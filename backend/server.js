@@ -14,7 +14,7 @@ import {app,server} from "./socket/socket.js";
 
 //const app=express();
 dotenv.config();
-const port=process.env.PORT || 4000;
+const port=process.env.PORT || 5000;
 app.use(express.json());
 app.use(cookieParser());
 app.get('/',(req,res)=>{
