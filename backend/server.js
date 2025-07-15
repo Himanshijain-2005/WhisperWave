@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import path from "path";
+import cors from 'cors'; // ✅ import cors
 
 
 import authRoutes from './routes/authroutes.js';
@@ -14,6 +15,10 @@ import {app,server} from "./socket/socket.js";
 
 //const app=express();
 dotenv.config();
+app.use(cors({
+  origin: 'https://whisperwave-1.onrender.com', // 👈 your frontend URL
+  credentials: true // 👈 allow cookies if you're using them
+}));
 const port=process.env.PORT || 4000;
 app.use(express.json());
 app.use(cookieParser());
