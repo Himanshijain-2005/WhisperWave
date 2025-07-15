@@ -13,6 +13,8 @@ const useSendMessage = () => {
             headers:{
                 'Content-Type':'application/json'
             },
+            credentials: "include", // ✅ Required for auth
+
             body: JSON.stringify({message})
            })
            const data=await res.json()
