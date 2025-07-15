@@ -5,7 +5,7 @@ const app=express();
 const server=http.createServer(app);
 const io=new Server(server,{
     cors:{
-        origin:["https://whisperwave-kvja.onrender.com"],
+        origin:["https://whisperwave-1.onrender.com"],
         methods:["GET","POST"]
     }
 });
