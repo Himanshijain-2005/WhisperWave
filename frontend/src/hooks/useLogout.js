@@ -10,7 +10,9 @@ const useLogout = () => {
    try {
         const res=await fetch("https://whisperwave-kvja.onrender.com/api/auth/logout",{
           method:"POST",
-          headers:{"Content-Type" :"application/json"},
+          credentials: "include", // ✅ Required for auth
+
+           headers:{"Content-Type" :"application/json"},
         })
         const data=await res.json();
         if(data.error)
