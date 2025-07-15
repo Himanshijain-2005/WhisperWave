@@ -8,7 +8,11 @@ const useGetConversations = () => {
         const getConversations = async () => {
             setLoading(true);
             try {
-                const res = await fetch("https://whisperwave-kvja.onrender.com/api/users");
+                const res = await fetch("https://whisperwave-kvja.onrender.com/api/users", {
+                method: "GET",
+                credentials: "include"  // ✅ This sends cookies (like JWT)
+                  });
+
                 const data = await res.json();
                 if (data.error) {
                     throw new Error(data.error)
