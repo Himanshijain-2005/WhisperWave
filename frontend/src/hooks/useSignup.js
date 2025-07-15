@@ -16,6 +16,8 @@ const useSignup = () => {
         const res=await fetch("https://whisperwave-kvja.onrender.com/api/auth/signup",{
           method:"POST",
           headers:{"Content-Type" :"application/json"},
+          credentials: "include", // ✅ Required for auth
+
           body: JSON.stringify({fullname,username,password,confirmPassword,gender})
         })
         const data=await res.json();
