@@ -10,7 +10,10 @@ const useGetMessages = () => {
         const getMessages = async () => {
             setLoading(true);
             try {
-                const res = await fetch(`https://whisperwave-kvja.onrender.com/api/message/get/${selectedConversation._id}`);
+               const res = await fetch(`https://whisperwave-kvja.onrender.com/api/message/get/${selectedConversation._id}`, {
+               method: "GET",
+               credentials: "include" // ✅ sends cookies like JWT
+                });
 
                 const data = await res.json();
                 if (data.error) {
