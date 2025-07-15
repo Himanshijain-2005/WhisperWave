@@ -1,4 +1,14 @@
 <h1>💬 Realtime Chat App</h1>
+<h1>
+  <a href="https://drive.google.com/file/d/12t6lobd-vlbNyvSck8wG66L7adiWMVol/view?usp=sharing" rel="noopener noreferrer">
+    🔗 Flow Chart of Whisper Wave (GitHub Repo)
+  </a>
+</h1>
+<h1>
+  <a href="https://whisperwave-1.onrender.com" rel="noopener noreferrer">
+    🔗 App is live 
+  </a>
+</h1>
 
 <p>
 A <strong>Realtime Chat Application</strong> built with <strong>MERN Stack (MongoDB, Express, React, Node.js)</strong> and <strong>Socket.io</strong> for realtime messaging. This app includes user authentication using tokens, MongoDB for data storage, and seamless realtime communication between users.
