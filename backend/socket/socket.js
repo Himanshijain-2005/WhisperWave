@@ -6,7 +6,9 @@ const server=http.createServer(app);
 const io=new Server(server,{
     cors:{
         origin:["https://whisperwave-1.onrender.com"],
-        methods:["GET","POST"]
+        methods:["GET","POST"],
+        credentials: true  // ✅ ADD THIS LINE
+
     }
 });
 
