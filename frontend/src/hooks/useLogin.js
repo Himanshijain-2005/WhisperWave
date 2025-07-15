@@ -17,6 +17,8 @@ const useLogin = () => {
         const res=await fetch("https://whisperwave-kvja.onrender.com/api/auth/login",{
           method:"POST",
           headers:{"Content-Type" :"application/json"},
+          credentials: "include", // ✅ THIS IS THE FIX
+
           body:JSON.stringify({username,password})
         })
         const data=await res.json();
